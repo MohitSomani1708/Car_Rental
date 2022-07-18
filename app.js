@@ -11,7 +11,11 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 const formidable=require('formidable');
 const socketIO=require('socket.io');
 const http=require('http');
+<<<<<<< HEAD
 const stripe=require('stripe')('YOUR_SK_KEY');
+=======
+const stripe=require('stripe')('sk_test_51LFZVzSC8b5jesjZyEAsa7XEMumuwilI9o8NM0Ry4r0IbtrvW9MmYkEyTLNDMkkPQAWTjX179uWhc37HdNv2vvCT00tukuEBpc');
+>>>>>>> 0eb98f5 (first commit)
 
 const app=express();
 
@@ -208,13 +212,22 @@ app.get('/loginErrors',(req,res)=>{
     });
 });
 
+<<<<<<< HEAD
 app.get('/listCar',requireLogin,(req,res)=>{
     res.render('listCar',{
+=======
+app.get('/listcar',requireLogin,(req,res)=>{
+    res.render('listcar',{
+>>>>>>> 0eb98f5 (first commit)
         title: 'Listing'
     });
 });
 
+<<<<<<< HEAD
 app.post('/listCar',requireLogin,(req,res)=>{
+=======
+app.post('/listcar',requireLogin,(req,res)=>{
+>>>>>>> 0eb98f5 (first commit)
     const newCar={
         owner: req.user._id,
         make: req.body.make,
